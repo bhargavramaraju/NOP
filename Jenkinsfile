@@ -22,7 +22,7 @@ pipeline {
        }
        stage('updated docker images') {
           steps {
-            sh ' cd ~/NOP/ sed -i "s|bhargavramaraju123/|bhargavramaraju123/sivaji:${BUILD_ID}|g" NOP/Deployment.yaml'
+            sh ' cd ~/NOP/ sed -i "s|bhargavramaraju123/sivaji:7|bhargavramaraju123/sivaji:${BUILD_ID}|g" NOP/Deployment.yaml'
           }
        }
 
