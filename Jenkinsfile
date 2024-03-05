@@ -22,8 +22,8 @@ pipeline {
        }
        stage('updated docker images') {
           steps {
-            sh "cd ~/NOP/ && yq eval -i '.spec.template.spec.containers[0].image= \"bhargavramaraju123/sivaji:${BUILD_ID}\"' ~/kubernetes/Deploy.yaml"
-            sh "cd ~/NOP/"
+            sh "cd ~/kubernetes/ && yq eval -i '.spec.template.spec.containers[0].image= \"bhargavramaraju123/sivaji:${BUILD_ID}\"' ~/kubernetes/Deploy.yaml"
+            sh "cd ~/kubernetes/"
             sh "git add --all"
             sh 'git commit -m "updated to git docker images"'
             sh "git push --force origin main"
