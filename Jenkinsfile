@@ -27,6 +27,7 @@ pipeline {
             cd ~/kubernetes/
             git add --all
             git commit -m "updated to git docker latest images"
+            git pull
             git push
             '''
           }
