@@ -28,7 +28,7 @@ pipeline {
             git add --all
             git commit -m "updated to git docker latest images"
             git pull
-            git push
+            git push --force origin main
             '''
           }
        }
