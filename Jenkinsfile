@@ -24,7 +24,7 @@ pipeline {
           steps {
             sh "cd ~/kubernetes/ && yq eval -i '.spec.template.spec.containers[0].image= \"bhargavramaraju123/sivaji:${BUILD_ID}\"' ~/kubernetes/Deploy.yaml"
             sh "cd ~/kubernetes/"
-            sh "git add ."
+            sh "git add --all"
             sh 'git commit -m "updated to git docker latest images"'
             sh "git push"
           }
